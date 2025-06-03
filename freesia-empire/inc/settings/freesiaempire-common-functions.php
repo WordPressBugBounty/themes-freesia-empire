@@ -38,12 +38,13 @@ function freesiaempire_wp_page_menu($page_markup) {
 	return $new_markup;
 }
 /*******************************freesiaempire MetaBox *********************************************************/
+function freesiaempire_register_layout_options() {
 global $freesiaempire_layout_options;
 $freesiaempire_layout_options = array(
 'default-sidebar'=> array(
 						'id'			=> 'freesiaempire_sidebarlayout',
 						'value' 		=> 'default',
-						'label' 		=> __( 'Default Layout Set in', 'freesia-empire' ).' '.'<a href="'.wp_customize_url() .'?autofocus[section]=freesiaempire_layout_options" target="_blank">'.__( 'Customizer', 'freesia-empire' ).'</a>',
+						'label' 		=> __( 'Default Layout Set in', 'freesia-empire' ).' '.'<a href="'. esc_url( wp_customize_url() ).'?autofocus[section]=freesiaempire_layout_options" target="_blank">'.__( 'Customizer', 'freesia-empire' ).'</a>',
 						'thumbnail' => ' '
 					),
 	'no-sidebar' 	=> array(
@@ -67,6 +68,9 @@ $freesiaempire_layout_options = array(
 							'label' 		=> __( 'Right sidebar Layout', 'freesia-empire' )
 						)
 			);
+}
+
+add_action( 'init', 'freesiaempire_register_layout_options' );
 /*************************** Add Custom Box **********************************/
 function freesiaempire_add_custom_box() {
 	add_meta_box(

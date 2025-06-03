@@ -1,10 +1,10 @@
 == Freesia Empire ==
 Contributors: themefreesia
 Tags: threaded-comments, left-sidebar, right-sidebar, custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-images, sticky-post, theme-options, translation-ready, post-formats, footer-widgets, blog, e-commerce, education, entertainment, news, portfolio
-Requires at least: 6.3
-Tested up to: 6.4
+Requires at least: 6.7
+Tested up to: 6.8.1
 Requires PHP: 5.6
-Stable tag: 1.4.2
+Stable tag: 1.4.3
 License: GNU General Public License version 3.0
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -119,6 +119,10 @@ All the theme files and other un-specified scripts are licensed under GNU Genera
 =================================================================================
 
 == CHANGE LOG ==
+= 1.4.3 =
+	- Update - Tested with latest version of WordPress
+	- Fix - Function _load_textdomain_just_in_time was called incorrectly.
+	
 = 1.4.2 =
 	- Fix - Title attribute security issue fixed
 		  - Default button text underline removed. Search button fixed
